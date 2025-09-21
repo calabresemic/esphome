@@ -1,0 +1,51 @@
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  name_add_mac_suffix: True
+
+# Enable logging
+logger:
+  level: ${log_level}
+
+# Enable Home Assistant API
+api:
+
+ota:
+  - platform: esphome
+    id: ota_esphome
+  - platform: http_request
+    id: ota_http_request
+
+http_request:
+
+wifi:
+
+improv_serial:
+
+binary_sensor:
+  - platform: status
+    name: Status
+
+button:
+  - platform: restart
+    name: Restart
+
+sensor:
+  - platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 60s
+  - platform: uptime
+    name: Uptime
+    update_interval: 60s
+
+switch:
+  - platform: restart
+    name: Restart
+
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: "IP Address"
+
+time:
+  - platform: homeassistant

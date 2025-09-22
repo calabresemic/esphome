@@ -3,8 +3,6 @@ esp8266:
   restore_from_flash: True
 
 binary_sensor:
-  - platform: status
-    name: Status
   - platform: gpio
     pin:
       number: GPIO0

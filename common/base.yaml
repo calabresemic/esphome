@@ -36,10 +36,6 @@ sensor:
     name: Uptime
     update_interval: 60s
 
-switch:
-  - platform: restart
-    name: Restart
-
 text_sensor:
   - platform: wifi_info
     ip_address:

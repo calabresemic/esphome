@@ -3,9 +3,6 @@ esphome:
   friendly_name: ${friendly_name}
   name_add_mac_suffix: True
 
-# Enable logging
-logger:
-
 # Enable Home Assistant API
 api:
 

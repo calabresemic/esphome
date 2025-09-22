@@ -1,0 +1,3 @@
+packages:
+  device_base: !include common/base.yaml
+  s31_configs: !include static/s31.yaml

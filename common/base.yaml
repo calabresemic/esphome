@@ -47,3 +47,4 @@ text_sensor:
 
 time:
   - platform: homeassistant
+    id: my_time

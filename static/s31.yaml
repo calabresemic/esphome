@@ -1,0 +1,70 @@
+esp8266:
+  board: esp12e
+  early_pin_init: False
+  restore_from_flash: True
+
+binary_sensor:
+  - platform: status
+    name: Status
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: Button
+    on_press:
+      - switch.toggle: relay
+
+sensor:
+  - platform: cse7766
+    current:
+      name: Current
+      accuracy_decimals: 2
+      filters:
+        - throttle_average: 60s
+    voltage:
+      name: Voltage
+      accuracy_decimals: 2
+      filters:
+        - throttle_average: 60s
+    power:
+      name: Power
+      accuracy_decimals: 2
+      id: my_power
+      filters:
+        - throttle_average: 60s
+    energy:
+      name: Energy
+      accuracy_decimals: 2
+      filters:
+        - throttle: 60s
+    apparent_power:
+      name: "Apparent Power"
+      filters:
+        - throttle_average: 60s
+    power_factor:
+      name: "Power Factor"
+      accuracy_decimals: 2
+      filters:
+        - throttle_average: 60s
+  - platform: total_daily_energy
+    name: "Daily Energy"
+    power_id: my_power
+    accuracy_decimals: 2
+
+status_led:
+  pin:
+    number: GPIO13
+    inverted: True
+
+switch:
+  - platform: gpio
+    name: Relay
+    pin: GPIO12
+    id: relay
+    restore_mode: RESTORE_DEFAULT_ON
+
+uart:
+  rx_pin: RX
+  baud_rate: 4800
+  parity: EVEN

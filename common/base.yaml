@@ -22,9 +22,9 @@ ota:
 
 wifi:
 
-binary_sensor:
-  - platform: status
-    name: Status
+# binary_sensor:
+#   - platform: status
+#     name: Status
 
 button:
   - platform: restart

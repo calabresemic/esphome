@@ -10,7 +10,6 @@ esp8266:
   board: esp01_1m
 
 logger:
-  level: ${log_level}
 
 # Enable Home Assistant API
 api:

@@ -9,6 +9,9 @@ esp8266:
   early_pin_init: False
   restore_from_flash: True
 
+http_request:
+  verify_ssl: False
+
 packages:
   device_base: !include common/base.yaml
   s31_configs: !include static/s31.yaml

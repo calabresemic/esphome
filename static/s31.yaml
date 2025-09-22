@@ -1,6 +1,4 @@
 binary_sensor:
-  - platform: status
-    name: Status
   - platform: gpio
     pin:
       number: GPIO0

@@ -5,7 +5,6 @@ esphome:
 
 # Enable logging
 logger:
-  level: ${log_level}
 
 # Enable Home Assistant API
 api:

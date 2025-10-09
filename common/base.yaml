@@ -1,6 +1,6 @@
 esphome:
   project:
-    name: "base_package"
+    name: "base"
     version: "1.0"
 
 button:

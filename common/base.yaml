@@ -1,7 +1,7 @@
 esphome:
   project:
     name: "calabresemic.esphome"
-    version: "1.0.0"
+    version: "1.0"
 
 button:
   - platform: restart

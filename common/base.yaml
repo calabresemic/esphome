@@ -1,6 +1,6 @@
 esphome:
   project:
-    name: "calabresemic.esphome"
+    name: "base_package"
     version: "1.0"
 
 button:
